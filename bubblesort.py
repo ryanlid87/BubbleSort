@@ -1,4 +1,3 @@
-
 from random import randint
 a = []
 for x in range(0,10):
@@ -9,9 +8,7 @@ def bubsort(a):
         for i in range(len(a)):
                 for x in range(0,len(a)-1):
                         if a[x] > a[x+1]:
-                                temp = a[x]
-                                a[x] = a[x+1]
-                                a[x+1] = temp
+                                a[x+1],a[x] = a[x],a[x+1]
         return a
 
 print bubsort(a)
